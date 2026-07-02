@@ -18,6 +18,48 @@
         line-height: 1.6;
       }
 
+      #home {
+        background-color: #1a1a2e;
+        color: #fff;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      #home h1 {
+        font-size: 52px;
+        margin-bottom: 15px;
+      }
+
+      #home p {
+        font-size: 20px;
+        color: #e94560;
+        margin-bottom: 30px;
+      }
+
+      #home button {
+        background-color: #e94560;
+        color: #fff;
+        border: none;
+        padding: 14px 36px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #home button:hover {
+        background-color: #c73652;
+      }
+
+      #portfolio {
+        display: none;
+      }
+
       nav {
         background-color: #1a1a2e;
         padding: 15px 40px;
@@ -144,73 +186,87 @@
   </head>
   <body>
 
-    <nav>
-      <ul>
-        <li><a href="#" onclick="showSection('about')" id="nav-about" class="active">About</a></li>
-        <li><a href="#" onclick="showSection('learning')" id="nav-learning">Learning</a></li>
-        <li><a href="#" onclick="showSection('projects')" id="nav-projects">Projects</a></li>
-        <li><a href="#" onclick="showSection('hobbies')" id="nav-hobbies">Hobbies</a></li>
-        <li><a href="#" onclick="showSection('contact')" id="nav-contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hi, I'm Aviwe Blaai — BCom Information Systems Student | Aspiring Software Developer</p>
+      <button onclick="enterPortfolio()">View My Portfolio</button>
+    </div>
 
-    <section id="hero">
-      <h1>Hi, I'm Aviwe Blaai</h1>
-      <p>BCom Information Systems Student | Aspiring Software Developer</p>
-    </section>
+    <div id="portfolio">
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('about')" id="nav-about" class="active">About</a></li>
+          <li><a href="#" onclick="showSection('learning')" id="nav-learning">Learning</a></li>
+          <li><a href="#" onclick="showSection('projects')" id="nav-projects">Projects</a></li>
+          <li><a href="#" onclick="showSection('hobbies')" id="nav-hobbies">Hobbies</a></li>
+          <li><a href="#" onclick="showSection('contact')" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <section id="about" class="active">
-      <h2>About Me</h2>
-      <p>I am a final-year BCom Information Systems student at the University of Fort Hare, passionate about software development and financial technology. I am currently attending the UCT Cortex Hub FinTech Lab Winter School 2026.</p>
-    </section>
+      <section id="hero">
+        <h1>Hi, I'm Aviwe Blaai</h1>
+        <p>BCom Information Systems Student | Aspiring Software Developer</p>
+      </section>
 
-    <section id="learning">
-      <h2>What I'm Learning</h2>
-      <ul>
-        <li>Python programming</li>
-        <li>HTML, CSS and JavaScript</li>
-        <li>Git and GitHub workflows</li>
-        <li>Docker and VS Code</li>
-        <li>FinTech and Open Banking concepts</li>
-      </ul>
-    </section>
+      <section id="about" class="active">
+        <h2>About Me</h2>
+        <p>I am a final-year BCom Information Systems student at the University of Fort Hare, passionate about software development and financial technology. I am currently attending the UCT Cortex Hub FinTech Lab Winter School 2026.</p>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>EasternDigital</h3>
-        <p>A student service marketplace built for the Emergent Technologies module (IFS313E) at the University of Fort Hare. My contribution focused on frontend development and UI/UX design.</p>
-      </div>
-      <div class="project">
-        <h3>Student Marketplace Listing Tool</h3>
-        <p>A Python command-line tool that allows students to list items for sale, enter prices, and calculate total listing value.</p>
-      </div>
-    </section>
+      <section id="learning">
+        <h2>What I'm Learning</h2>
+        <ul>
+          <li>Python programming</li>
+          <li>HTML, CSS and JavaScript</li>
+          <li>Git and GitHub workflows</li>
+          <li>Docker and VS Code</li>
+          <li>FinTech and Open Banking concepts</li>
+        </ul>
+      </section>
 
-    <section id="hobbies">
-      <h2>Hobbies & Interests</h2>
-      <ul>
-        <li>Exploring FinTech and digital payment systems</li>
-        <li>Building and experimenting with code</li>
-        <li>Reading about financial inclusion in South Africa</li>
-      </ul>
-    </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>EasternDigital</h3>
+          <p>A student service marketplace built for the Emergent Technologies module (IFS313E) at the University of Fort Hare. My contribution focused on frontend development and UI/UX design.</p>
+        </div>
+        <div class="project">
+          <h3>Student Marketplace Listing Tool</h3>
+          <p>A Python command-line tool that allows students to list items for sale, enter prices, and calculate total listing value.</p>
+        </div>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:aviweblaai7@gmail.com">aviweblaai7@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/aviweblaai7" target="_blank">github.com/aviweblaai7</a></p>
-    </section>
+      <section id="hobbies">
+        <h2>Hobbies & Interests</h2>
+        <ul>
+          <li>Exploring FinTech and digital payment systems</li>
+          <li>Building and experimenting with code</li>
+          <li>Reading about financial inclusion in South Africa</li>
+        </ul>
+      </section>
 
-    <footer>
-      <p>© 2026 Aviwe Blaai | Built with HTML & CSS | UCT FinTech Winter School</p>
-      <p>
-        <a href="mailto:aviweblaai7@gmail.com">aviweblaai7@gmail.com</a> |
-        <a href="https://github.com/aviweblaai7" target="_blank">GitHub</a>
-      </p>
-    </footer>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:aviweblaai7@gmail.com">aviweblaai7@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/aviweblaai7" target="_blank">github.com/aviweblaai7</a></p>
+      </section>
+
+      <footer>
+        <p>© 2026 Aviwe Blaai | Built with HTML & CSS | UCT FinTech Winter School</p>
+        <p>
+          <a href="mailto:aviweblaai7@gmail.com">aviweblaai7@gmail.com</a> |
+          <a href="https://github.com/aviweblaai7" target="_blank">GitHub</a>
+        </p>
+      </footer>
+    </div>
 
     <script>
+      function enterPortfolio() {
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('portfolio').style.display = 'block';
+        document.getElementById('hero').style.display = 'block';
+      }
+
       function showSection(sectionId) {
         var sections = document.querySelectorAll('section:not(#hero)');
         sections.forEach(function(section) {
